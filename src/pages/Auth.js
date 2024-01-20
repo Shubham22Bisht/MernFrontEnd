@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {useCookies} from "react-cookie"
+import { BACKEND_URL } from "./services";
 export const Auth = () => {
   return (
     <div className="auth">
@@ -21,7 +22,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response=await axios.post("http://localhost:3001/auth/login", {
+      const response=await axios.post(`${BACKEND_URL}/auth/login`, {
         username,
         password
       });
@@ -51,7 +52,7 @@ const Register = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/auth/register", {
+      await axios.post(`${BACKEND_URL}/auth/register`, {
         username,
         password
       });

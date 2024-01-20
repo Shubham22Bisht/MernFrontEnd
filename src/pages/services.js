@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://mernbackend-atij.onrender.com";

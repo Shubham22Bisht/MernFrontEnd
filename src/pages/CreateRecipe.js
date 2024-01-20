@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
+import { BACKEND_URL } from "./services";
 export const CreateRecipe = () => {
   const userID=useGetUserID();
   const [cookies,_]=useCookies(["access_token"]);
@@ -32,7 +33,7 @@ export const CreateRecipe = () => {
   const handleSubmit=async(event)=>{
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/recipes",{...recipe},
+      await axios.post(`${BACKEND_URL}/recipes`,{...recipe},
       {headers:{authorization:cookies.access_token}});
       alert("Recipe Created Successfully");
       navigate("/");

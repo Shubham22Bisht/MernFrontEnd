@@ -2,6 +2,7 @@ import axios from "axios";
 import React, {  useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
+import { BACKEND_URL } from "./services";
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
@@ -10,7 +11,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        const response = await axios.get(`${BACKEND_URL}/recipes`);
         setRecipes(response.data);
       } catch (error) {
         console.log(error);
@@ -19,7 +20,7 @@ export const Home = () => {
     const fetchSavedRecipe = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`,
+          `${BACKEND_URL}/recipes/savedRecipes/ids/${userID}`,
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (error) {
@@ -32,7 +33,7 @@ export const Home = () => {
 
   const saveRecipe = async (recipeID) => {
     try {
-      const response = await axios.put("http://localhost:3001/recipes", {
+      const response = await axios.put(`${BACKEND_URL}/recipes`, {
         recipeID,
         userID,
       },{headers:{authorization:cookies.access_token}});
