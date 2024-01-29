@@ -4,6 +4,7 @@ import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
 import { BACKEND_URL } from "./services";
+import "./CreateRecipe.css";
 export const CreateRecipe = () => {
   const userID=useGetUserID();
   const [cookies,_]=useCookies(["access_token"]);
@@ -43,11 +44,11 @@ export const CreateRecipe = () => {
   }
   return (
     <div className="create-recipe">
-      <h2>Create Recipe</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+      <h2 className="heading">Create Recipe</h2>
+      <form className="form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" onChange={handleChange}/>
-        <label htmlFor="ingredients">Ingredients</label>
+        <label htmlFor="ingredients">Ingredients:</label>
         {
           recipe.ingredients.map((ingredient,index)=>(
             <input
@@ -59,14 +60,14 @@ export const CreateRecipe = () => {
             />
           ))
         }
-        <button type="button" onClick={addIngredient}>Add Ingredient</button>
-        <label htmlFor="instructions">instructions</label>
+        <button className="add-ingredient" type="button" onClick={addIngredient}>Add Ingredient</button>
+        <label htmlFor="instructions">Instructions:</label>
         <textarea id="instructions" name="instructions" onChange={handleChange}></textarea>
-        <label htmlFor="imageUrl">Image Url</label>
+        <label htmlFor="imageUrl">Image Url:</label>
         <input type="text" id="imageUrl" name="imageUrl" onChange={handleChange} />
-        <label htmlFor="cookingTime">Cooking Time</label>
+        <label htmlFor="cookingTime">Cooking Time(mins):</label>
         <input type="number" id="cookingTime" name="cookingTime" onChange={handleChange}/>
-        <button type="submit" >Submit</button>
+        <button className="submit" type="submit" >Submit</button>
       </form>
     </div>
   );

@@ -1,0 +1,36 @@
+.navbar {
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  .create-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 400px;
+  }
+  .create-recipe form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-logout-signup{
+    background-color: rgb(12, 216, 12);
+    color: black;
+    height: 40px;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 5px 5px 5px 5px;
+  }

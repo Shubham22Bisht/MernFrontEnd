@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {useCookies} from "react-cookie"
-import { BACKEND_URL } from "./services";
+import { BACKEND_URL } from "../services";
+import "./Auth.css";
 export const Auth = () => {
   return (
     <div className="auth">
@@ -26,11 +27,17 @@ const Login = () => {
         username,
         password
       });
-      setCookies("access_token",response.data.token);
-      window.localStorage.setItem("userID",response.data.userID);
-      navigate("/");
+      if(response?.message=="User does not exist"){
+         alert("Username does not Exist");
+      }else if(response?.message=="Username or Password Invalid"){
+        alert("Wrong Username or Password Try Again!!")
+      }else{
+        setCookies("access_token",response.data.token);
+        window.localStorage.setItem("userID",response.data.userID);
+        navigate("/");
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error.message);
     }
   };
   return (
@@ -84,7 +91,7 @@ const Form = ({
   return (
     <div className="auth-container">
       <form onSubmit={onSubmit}>
-        <h2>{label}</h2>
+        <h2 className="form-label">{label}</h2>
         <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
@@ -107,7 +114,7 @@ const Form = ({
             }}
           />
         </div>
-        <button type="submit">{label}</button>
+        <button  className="submit-button" type="submit">{label}</button>
       </form>
     </div>
   );

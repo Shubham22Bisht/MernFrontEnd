@@ -2,7 +2,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import './App.css';
 import { SavedRecipes } from './pages/SavedRecipe';
 import { Home } from './pages/Home';
-import { Auth } from './pages/Auth';
+import { Auth } from './pages/auth/Auth';
 import { CreateRecipe } from './pages/CreateRecipe';
 import { Navbar } from './components/Navbar';
 function App() {

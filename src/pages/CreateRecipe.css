@@ -1,0 +1,37 @@
+.create-recipe{
+    width: 50%;
+    min-height: 500px;
+    background-color: rgb(41, 193, 193);
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 50px;
+}
+label{
+    font-weight: 800px;
+    font-style: italic;
+    font-size: 20px;
+}
+.form{
+    width: 80%;
+}
+.heading{
+    color: black;
+    font-size: 50px;
+    font-style: italic;
+}
+.add-ingredient{
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-weight: 800px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.submit{
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-weight: 800px;
+    font-style: italic;
+    font-size: 20px;
+}
