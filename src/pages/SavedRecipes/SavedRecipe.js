@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../../hooks/useGetUserID";
 import { BACKEND_URL } from "../services";
-import { useCookies } from "react-cookie";
 import { ClipLoader } from "react-spinners";
 import "./style.css";
 
@@ -10,7 +9,6 @@ export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const userID = useGetUserID();
-  const [cookies, _]= useCookies(["access_token"]);
   useEffect(() => {
     const fetchSavedRecipe = async () => {
       setLoading(true);

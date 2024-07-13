@@ -11,7 +11,7 @@ import "./style.css";
 
 export const CreateRecipe = () => {
   const userID = useGetUserID();
-  const [cookies, _] = useCookies(["access_token"]);
+  const [cookies,_] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
     name: "",
     ingredients: [],
