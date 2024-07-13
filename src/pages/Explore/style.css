@@ -1,0 +1,141 @@
+.box {
+  margin: 0;
+  padding: 0;
+}
+  
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.superHeading{
+  font-size: 100px;
+  font-style: italic;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(38, 255, 0);
+}
+
+.recipeList{
+  list-style: none;
+  background-color:#0C0A00;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recipeListItem{
+  border: 5px solid rgb(111, 255, 0);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(41, 193, 193);
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.heading_saveButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  gap: 20px;
+}
+
+.recipeName{
+  font-size: 40px;
+  padding-top: 0;
+  margin-top: 20px;
+  padding-left: 0;
+  margin-left: 0;
+  font-weight: 800;
+}
+.image_ingredients{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.ingredients{
+  margin-top: 0;
+}
+.ingredientsHeading{
+  color: rgb(47, 255, 0);
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.ingredientsList{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.save {
+  background-color: rgb(44, 247, 3);
+  color: rgb(0, 0, 0);
+  height: 40px;
+  font-weight: 800px;
+  margin-top: 0;
+  margin-right: 0;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.save:hover{
+  transform: scale(1.1);
+  background-color: rgb(235, 255, 14);
+}
+
+.banner {
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.banner:hover {
+  transform: scale(1.1); /* Enlarge the image slightly on hover */
+}
+.cookingTime{
+  color: black;
+  max-width: 400px;
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.instructions{
+  font-weight: 800;
+  font-size: 20px;
+  width: 400px;
+  color: rgba(240, 248, 255, 0.753);
+  text-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.instructionspara{
+  margin: 0;
+  padding:20px;
+}

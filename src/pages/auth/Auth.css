@@ -1,0 +1,27 @@
+ .auth{
+  background-color:#0C0A00;
+}
+.auth-container{
+    background-color: rgb(41, 193, 193);
+    height: 400px;
+    margin-left: 130px;
+    margin-bottom: 50px;
+    border-radius: 20px 20px 20px 20px;
+}
+.submit-button{
+    height: 30px;
+    width: 90px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800px;
+    font-style: italic;
+    font-size: 15px;
+    
+}
+.form-label{
+    font-weight: 800px;
+    font-style: italic;
+    font-size: 50px
+}

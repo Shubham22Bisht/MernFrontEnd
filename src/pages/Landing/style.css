@@ -1,0 +1,60 @@
+
+  .get-started {
+    height: 100%;
+    width: 100%;
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/hero.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+  
+  .overlay {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .superHeadingLandingPage {
+    font-size: 8rem;
+    margin: 0;
+    color: #37ff0f;
+    font-style: italic;
+  }
+  
+  .subHeading {
+    font-size: 1.8em;
+    margin: 10px 0 20px;
+    font-weight: 800;
+    text-wrap: nowrap;
+    color: rgb(0, 0, 0);
+  }
+  
+  .get-started-button {
+    background-color: #fff710; /* Tomato color */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-button:hover {
+    background-color: #3dff1b; /* Darker tomato color */
+    color: black;
+  }
+  

@@ -1,0 +1,111 @@
+
+.box {
+  margin: 0;
+  padding: 0;
+}
+  
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.savedRecipeHeading{
+  font-size: 70px;
+  font-style: italic;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(5, 253, 9);
+}
+
+.savedRecipeList{
+  list-style: none;
+  background-color:#0C0A00;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.savedRecipeListItem{
+  border: 5px solid rgb(111, 255, 0);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(41, 193, 193);
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.savedRecipeHeading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  gap: 20px;
+}
+
+.savedRecipeName{
+  font-size: 40px;
+  padding-left: 0;
+  color: rgb(0, 0, 0);
+}
+.savedRecipe_image_ingredients{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.savedingredients{
+  margin-top: 0;
+}
+.savedingredientsHeading{
+  color: rgb(47, 255, 0);
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.savedingredientsList{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.savedbanner{
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.savedcookingTime{
+  color: black;
+  max-width: 400px;
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.savedinstructions{
+  font-weight: 800;
+  font-size: 20px;
+  width: 400px;
+  color: rgba(240, 248, 255, 0.753);
+  text-wrap: wrap;
+}
+
+
