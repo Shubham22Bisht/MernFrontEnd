@@ -5,8 +5,8 @@ import { useCookies } from "react-cookie";
 import { BACKEND_URL } from "../services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./style.css";
 import { ClipLoader } from "react-spinners";
+import "./style.css";
 
 export const Explore = () => {
   const [recipes, setRecipes] = useState([]);

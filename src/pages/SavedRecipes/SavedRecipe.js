@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../../hooks/useGetUserID";
 import { BACKEND_URL } from "../services";
 import { useCookies } from "react-cookie";
-import "./style.css";
 import { ClipLoader } from "react-spinners";
+import "./style.css";
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
