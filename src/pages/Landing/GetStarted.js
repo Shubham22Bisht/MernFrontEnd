@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 import { useNavigate } from 'react-router-dom';
 import SplitType from 'split-type';
+import { gsap } from 'gsap';
 import "./style.css";
 
 export const GetStarted = () => {

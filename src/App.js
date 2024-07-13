@@ -5,7 +5,7 @@ import { Explore } from './pages/Explore/Explore.js';
 import { Auth } from './pages/auth/Auth';
 import { CreateRecipe } from './pages/CreateRecipe/CreateRecipe.js';
 import { Navbar } from './components/Navbar/Navbar.js';
-import { GetStarted } from './pages/Landing/GetStarted';
+import { GetStarted } from './pages/Landing/GetStarted.js';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 function App() {
