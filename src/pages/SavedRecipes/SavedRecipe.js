@@ -14,7 +14,7 @@ export const SavedRecipes = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${BACKEND_URL}/recipes/savedRecipes/${userID}`,
+          `${BACKEND_URL}/recipes/savedRecipes/${userID}`
         );
         console.log(response);
         setSavedRecipes(response.data.savedRecipes);
@@ -31,46 +31,56 @@ export const SavedRecipes = () => {
     <div>
       {loading ? (
         <div className="loading-container">
-          <ClipLoader color={"#00BFFF"} loading={loading} size={150} />
+          <ClipLoader color={"#2aff05"} loading={loading} size={200} />
         </div>
       ) : (
         <>
           <h1 className="savedRecipeHeading">Saved Recipes</h1>
           <ul className="savedRecipeList">
-            {savedRecipes?.map((recipe) => (
-              <li className="savedRecipeListItem" key={recipe?._id}>
-                <div className="savedRecipeHeading">
-                  <h2 className="savedRecipeName">{recipe?.name}</h2>
-                </div>
-                <div className="savedinstructions">
-                  <p>{recipe?.instructions}</p>
-                </div>
-
-                <div className="savedRecipe_image_ingredients">
-                  <div className="savedingredients">
-                    <h3 className="savedingredientsHeading">Ingredients</h3>
-                    <ul className="savedingredientsList">
-                      {recipe?.ingredients?.map((ingredient, index) => (
-                        <li key={index} className="ingredientItems">
-                          {ingredient}
-                        </li>
-                      ))}
-                    </ul>
+            {savedRecipes.length === 0 ? (
+              <div className="noRecipeContainer">
+                <p className="noSavedRecipes">No Saved Recipes</p>
+              </div>
+            ) : (
+              savedRecipes?.map((recipe) => (
+                <li className="savedRecipeListItem" key={recipe?._id}>
+                  <div className="savedRecipeHeading">
+                    <h2 className="savedRecipeName">{recipe?.name}</h2>
                   </div>
-                  <div className="imageContainer">
-                    <img
-                      className="savedbanner"
-                      src={recipe?.imageUrl ? recipe?.imageUrl : recipe?.image}
-                      alt={recipe?.name}
-                    />
+                  <div className="savedinstructions">
+                    <p className="savedInstructionsPara">
+                      {recipe?.instructions}
+                    </p>
                   </div>
-                </div>
 
-                <p className="savedcookingTime">
-                  Cooking Time: {recipe?.cookingTime} minutes
-                </p>
-              </li>
-            ))}
+                  <div className="savedRecipe_image_ingredients">
+                    <div className="savedingredients">
+                      <h3 className="savedingredientsHeading">Ingredients</h3>
+                      <ul className="savedingredientsList">
+                        {recipe?.ingredients?.map((ingredient, index) => (
+                          <li key={index} className="ingredientItems">
+                            {ingredient}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="imageContainer">
+                      <img
+                        className="savedbanner"
+                        src={
+                          recipe?.imageUrl ? recipe?.imageUrl : recipe?.image
+                        }
+                        alt={recipe?.name}
+                      />
+                    </div>
+                  </div>
+
+                  <p className="savedcookingTime">
+                    Cooking Time: {recipe?.cookingTime} minutes
+                  </p>
+                </li>
+              ))
+            )}
           </ul>
         </>
       )}

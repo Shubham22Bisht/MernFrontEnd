@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { FaPlus, FaSignInAlt, FaSignOutAlt, FaHeart } from 'react-icons/fa'; // Importing icons
 import { SiAzuredataexplorer } from "react-icons/si";
-import {toast } from "react-toastify";
+import {toast,ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.css";
 import logo from "../../assets/logo.png";
@@ -15,7 +15,10 @@ export const Navbar = () => {
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
-    navigate("/auth");
+    toast.success("Logged out successfully");
+    setTimeout(()=>{
+      navigate("/auth");
+    },1000);
   };
   const handleShowSavedRecipes = () => {
     try {

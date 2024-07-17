@@ -10,7 +10,17 @@
   align-items: center;
   height: 100vh;
 }
+.noRecipeContainer{
+  padding: 0;
+  margin:50px 0 0 0 ;
+}
+.noSavedRecipes{
+  color: rgb(5, 253, 9);
+  font-size: 90px;
+  font-weight:800;
+  text-wrap: wrap;
 
+}
 .savedRecipeHeading{
   font-size: 70px;
   font-style: italic;
@@ -101,11 +111,19 @@
 }
 
 .savedinstructions{
-  font-weight: 800;
-  font-size: 20px;
-  width: 400px;
+  margin:0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
   color: rgba(240, 248, 255, 0.753);
   text-wrap: wrap;
 }
 
-
+.savedInstructionsPara{
+  margin: 0;
+  padding-left:10px;
+  padding-right: 0;
+  width: 500px;
+  padding-bottom: 15px;
+  text-wrap: wrap;
+}

@@ -126,9 +126,8 @@
 }
 
 .instructions{
-  font-weight: 800;
-  font-size: 20px;
-  width: 400px;
+  font-weight: 700;
+  font-size: 15px;
   color: rgba(240, 248, 255, 0.753);
   text-wrap: wrap;
   margin: 0;
@@ -137,5 +136,9 @@
 
 .instructionspara{
   margin: 0;
-  padding:20px;
+  padding-left:20px;
+  padding-right: 0;
+  width: 500px;
+  padding-bottom: 15px;
+  text-wrap: wrap;
 }

@@ -58,6 +58,7 @@ export const Explore = () => {
         },
         { headers: { authorization: cookies.access_token } }
       );
+      toast.success("Recipe saved successfully")
       setSavedRecipes(response.data.savedRecipes);
     } catch (error) {
       console.error(error);
@@ -75,6 +76,7 @@ export const Explore = () => {
         data: { recipeID, userID },
         headers: { authorization: cookies.access_token },
       });
+      toast.success("Recipe unsaved successfully")
       setSavedRecipes(response.data.savedRecipes);
     } catch (error) {
       console.error(error);
@@ -88,7 +90,7 @@ export const Explore = () => {
       <ToastContainer />
       {loading ? (
         <div className="loading-container">
-          <ClipLoader color={"#00BFFF"} loading={loading} size={150} />
+          <ClipLoader color={"#2aff05"} loading={loading} size={200} />
         </div>
       ) : (
         <>
